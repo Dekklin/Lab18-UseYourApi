@@ -14,7 +14,7 @@ This MVC web application is practice grabbing information from an API (lab-17) a
 ![Lab 18 Screenshot 3](https://puu.sh/ATcXF/8999eb67eb.png)
 
 ## Getting Started
-The following is required to run the program.
+The following is required to run the program
 1. Visual Studio 2017 
 2. The .NET desktop development workload enabled
 3. ASP.NET web API packages
