@@ -1,0 +1,45 @@
+﻿@model ToDo
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+<link rel="stylesheet" href="~/normalize.css" type="text/css" />
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous">
+<link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
+<h2>Update Todo</h2>
+
+<hr />
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Update">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group" id="not-center">
+                <label asp-for="Finished" class="control-label"></label>
+                <input asp-for="Finished" class="form-control" />
+                <span asp-validation-for="Finished" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ListID" class="control-label"></label>
+                @(Html.DropDownListFor(i => i.ListID, new SelectList((IEnumerable<ToDoList>)ViewData["ToDoList"], "ID", "Name")))
+                <span asp-validation-for="ListID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

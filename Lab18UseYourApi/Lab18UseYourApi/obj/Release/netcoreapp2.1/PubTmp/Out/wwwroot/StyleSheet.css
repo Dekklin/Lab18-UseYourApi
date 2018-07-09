@@ -1,0 +1,19 @@
+﻿body {
+    padding: 3em;
+    background-color: lightgrey;
+}
+.center {
+    text-align: center;
+}
+#home-options{
+    padding: 1em;
+}
+img {
+    width: 50%;
+}
+.table {
+    border-color:black;
+}
+.not-center {
+    
+}
